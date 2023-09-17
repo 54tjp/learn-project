@@ -13,6 +13,12 @@ import java.util.Arrays;
 public class RightNum {
 
     public static void swap(int[] arr, int i, int j) {
+        int tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp;
+    }
+
+    public static void swapNew(int[] arr, int i, int j) {
         arr[i] = arr[i] ^ arr[j];
         arr[j] = arr[i] ^ arr[j];
         arr[i] = arr[i] ^ arr[j];
@@ -107,7 +113,7 @@ public class RightNum {
             for (int i = 0; i < testTime; i++) {
                 int[] arr1 = generateRandomArray(maxSize, maxValue);
                 int[] arr2 = copyArray(arr1);
-                BubbleSort.bubbleSortOptimize(arr1);
+                SelectionSort.selectionSort(arr1);
                 comparator(arr2);
                 if (!isEqual(arr1, arr2)) {
                     succeed = false;
@@ -121,7 +127,7 @@ public class RightNum {
 
         int[] arr = generateRandomArray(maxSize, maxValue);
         printArray(arr);
-        BubbleSort.bubbleSortOptimize(arr);
+        SelectionSort.selectionSort(arr);
         printArray(arr);
     }
 
