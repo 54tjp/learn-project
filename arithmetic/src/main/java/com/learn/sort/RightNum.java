@@ -113,7 +113,7 @@ public class RightNum {
             for (int i = 0; i < testTime; i++) {
                 int[] arr1 = generateRandomArray(maxSize, maxValue);
                 int[] arr2 = copyArray(arr1);
-                SelectionSort.selectionSort(arr1);
+                InsertionSort.insertionSort(arr1);
                 comparator(arr2);
                 if (!isEqual(arr1, arr2)) {
                     succeed = false;
@@ -127,7 +127,7 @@ public class RightNum {
 
         int[] arr = generateRandomArray(maxSize, maxValue);
         printArray(arr);
-        SelectionSort.selectionSort(arr);
+        InsertionSort.insertionSort(arr);
         printArray(arr);
     }
 
